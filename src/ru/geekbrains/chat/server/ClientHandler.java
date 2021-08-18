@@ -67,6 +67,7 @@ public class ClientHandler {
                     if (maybeAuthEntry != null) {
                         if (server.isNicknameFree(maybeAuthEntry.getNickname())) {
                             sendMessage("CMD: auth is OK");
+                            sendMessage("-help - список доступных команд");
                             name = maybeAuthEntry.getNickname();
                             login = maybeAuthEntry.getLogin();
                             server.broadcast(name + " logged-in");
